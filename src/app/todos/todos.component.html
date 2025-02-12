@@ -1,0 +1,15 @@
+<h3>Todo List</h3>
+
+<!--<p *ngif="!todoItems().length">Loading...</p>--> <!--This is the old way but still works-->
+@if (!todoItems().length) {
+    <p>Loading...</p>
+}
+
+<ul class="todos">
+    @for (todo of todoItems(); track todo.id) {
+        <li class="todos_item">
+            <input id="todo-{{ todo.id }}" type="checkbox" [value]="todo.completed" />
+            <label for="todo-{{ todo.id }}">{{ todo.title }}</label>
+        </li>
+    }
+</ul>
