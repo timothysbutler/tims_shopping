@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/tims_shopping",
+            "outputPath": "dist/tims_todo",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "tims_shopping:build:production"
+              "buildTarget": "tims_todo:build:production"
             },
             "development": {
-              "buildTarget": "tims_shopping:build:development"
+              "buildTarget": "tims_todo:build:development"
             }
           },
           "defaultConfiguration": "development"
